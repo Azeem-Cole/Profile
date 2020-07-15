@@ -30,6 +30,9 @@ li{
     border-radius: 5px;
     white-space: nowrap;
 }
+#navlinks{
+    height: 100px;
+}
 
 li:hover{
    background-color: #77abb7;
@@ -40,3 +43,9 @@ li, a:visited, a:link{
     color: white;
     text-decoration-line: none;
 }
+
+body.home a.home, body.articles a.articles, body.blog a.blog {
+
+    background-color: green;
+    
+    }

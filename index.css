@@ -1,11 +1,13 @@
 html{
     background-color: #254b62;
-    height: auto;
+    height: 100%;
+    padding: 0px;
+    
 }
 
 body{
     margin: 0px;
-    height: auto;
+    height: 100%;
     background-color:#254b62;
 }
 
@@ -65,15 +67,14 @@ hr{
 
 #foot-div{
     padding-top: 10px;
-    height: inherit;
     width: 25%;
     margin: 0 auto;
     text-align: center;
 }
 footer{
    background-color: #1d3e53;
+   top: 100%;
    position:sticky;
-   margin-bottom: 0[x];
    width:100%;
    height:80px;
     
