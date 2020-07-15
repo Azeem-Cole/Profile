@@ -15,6 +15,7 @@ function myFunction() {
 
 var addressParse = getParentUrl().split("").join("").split("/").reverse();
 var address = addressParse[0];
+alert(address);
 
 
   if ( address  == "index.html"){
