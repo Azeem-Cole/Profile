@@ -2,7 +2,13 @@
   box-sizing: content-box;
 }
 
+html {
+  background-color: #254b62;
+  height: 100%;
+  padding: 0px;
+}
+
 body {
-  padding: 0;
-  margin: 0;
+  margin: 0px;
+  height: 100%;
 }

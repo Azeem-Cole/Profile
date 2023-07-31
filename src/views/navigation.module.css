@@ -1,0 +1,40 @@
+#nav-option {
+  margin: 0 auto;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+li {
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  font-size: 20px;
+  padding: 10px;
+  border: 3px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#navlinks {
+  height: 100px;
+}
+
+li:hover {
+  background-color: #77abb7;
+  border-width: 3px;
+}
+
+li,
+a:visited,
+a:link {
+  color: white;
+  text-decoration-line: none;
+}
+
+body.home a.home,
+body.articles a.articles,
+body.blog a.blog {
+  background-color: green;
+}
