@@ -1,12 +1,36 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "target": "ES2017",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "target": "es6" /* Specifies the ECMAScript target version */,
+    "module": "esnext" /* Specifies the module code generation */,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ] /* Specifies the available library files */,
+    "jsx": "react" /* Enables JSX support */,
+    "moduleResolution": "node" /* Specifies how modules are resolved */,
+    "allowSyntheticDefaultImports": true /* Allows default imports from modules with no default export */,
+    "esModuleInterop": true /* Enables interoperability between CommonJS and ES Modules */,
+    "strict": true /* Enables all strict type-checking options */,
+    "noImplicitAny": true /* Throws an error when a variable or parameter has an implicit 'any' type */,
+    "noImplicitReturns": true /* Throws an error when not all code paths in a function return a value */,
+    "noImplicitThis": true /* Throws an error when 'this' is used without a type */,
+    "noUnusedLocals": true /* Throws an error when a variable is declared but not used */,
+    "noUnusedParameters": true /* Throws an error when a function parameter is declared but not used */,
+    "noFallthroughCasesInSwitch": true /* Throws an error for fallthrough cases in switch statements */,
+    "baseUrl": "./src" /* Base directory to resolve non-relative module names */,
+    "paths": {
+      "@/*": ["*"]
+    } /* Aliases for module name resolution */,
+    "sourceMap": true /* Generates corresponding .map files for easier debugging */,
+    "outDir": "dist" /* Redirect output structure to the directory */,
+    "rootDir": "src" /* Specifies the root directory of input files */,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*"
+  ] /* Files or patterns to be included in the compilation */,
+  "exclude": [
+    "node_modules"
+  ] /* Files or patterns to be excluded from the compilation */
 }

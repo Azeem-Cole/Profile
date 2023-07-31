@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./views/header";
-import styles from "./App.module.css";
+import styles from "./app.module.css";
 
 const App = () => {
   return (

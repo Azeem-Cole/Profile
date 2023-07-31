@@ -1,24 +1,26 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.jsx", // Replace 'index.tsx' with your entry point
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.jsx",
+    filename: "bundle.js",
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".css", ".module.css"], // Add '.css' to the extensions
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".css"], // Add '.css' to the extensions
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
+        exclude: ["/node_modules/"],
         use: "ts-loader",
       },
       {
-        test: /\.module\.css$/,
+        test: /\.css$/,
+        exclude: /\.module\.css$/,
         use: ["style-loader", "css-loader"],
       },
       {
@@ -28,16 +30,26 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              modules: true, // Enable CSS modules
+              modules: { localIdentName: "[local]--[hash:base64:4]" },
             },
           },
         ],
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: "babel-loader",
+        exclude: ["/node_modules/"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-react"], // Add this line
+          },
+        },
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html", // Specify the path to your HTML template
+    }),
+  ],
 };
